@@ -1,0 +1,13 @@
+.clear{
+    clear: both;
+}
+
+h1{
+    float: left;
+    font-size: 20px;
+}
+
+p{
+    float: left;
+    font-size: 20px;
+}
