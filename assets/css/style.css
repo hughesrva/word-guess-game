@@ -1,13 +1,45 @@
+@font-face {
+    font-family: 'botwFont';
+    src: url(../fonts/the_wild_breath_of_zelda-webfont.woff2) format('woff2'),
+         url(../fonts/the_wild_breath_of_zelda-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html {
+    height: 100%;
+    width: 100%;
+
+}
 .clear{
     clear: both;
 }
 
+body{
+    font-family: botwFont;
+    color: #d1ffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 1px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/botw-background2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 h1{
-    float: left;
-    font-size: 20px;
+    font-size: 60x;
+    padding: 0px;
+    margin: 0px;
 }
 
 p{
     float: left;
-    font-size: 20px;
+    font-size: 50px;
 }
+
+
+.value{
+    float: right;
+}
+
