@@ -53,7 +53,7 @@ var init = function () {
         var wordLetters = selection.split("");
         var word = [];
         sound.pause();
-        song.volume = 0.3;
+        song.volume = 0.2;
         song.loop = true;
         song.play();
         for (let i = 0; i < wordLetters.length; i++) {
@@ -130,12 +130,13 @@ var init = function () {
                     if (letter === wordLetters[j]) {
                         word[j] = letter;
                         changeSound("assets/sounds/itemget.mp3");
-                        sound.volume = 0.5;
+                        sound.volume = 1.0;
                         sound.play();
                     }
                     // checks to see if word is complete
                     if (word.indexOf("_") === -1) {
                         changeSound("assets/sounds/secretsolve.mp3");
+                        sound.volume = 1.0;
                         sound.play();
                         resetVariables()
                     }
@@ -146,7 +147,7 @@ var init = function () {
             // adds key to tried list and deducts a guess if wrong
             else if (guessesLeft > 1) {
                 changeSound("assets/sounds/korokdrop.mp3");
-                sound.volume = 0.5;
+                sound.volume = 1.0;
                 sound.play();
                 guessed.push(letter);
                 document.getElementById("lettersGuessed").innerHTML = guessed;
