@@ -53,7 +53,7 @@ var init = function () {
         var wordLetters = selection.split("");
         var word = [];
         sound.pause();
-        song.volume = 0.2;
+        song.volume = 0.1;
         song.loop = true;
         song.play();
         for (let i = 0; i < wordLetters.length; i++) {
@@ -66,8 +66,8 @@ var init = function () {
             selection = words[Math.floor(Math.random() * words.length)];
             wordLetters = selection.split("");
             word = [];
-            console.log(word);
-            document.getElementById("word").innerHTML = word;
+            document.getElementById("guessesLeft").innerHTML = guessesLeft;
+            document.getElementById("word").innerHTML = word.join(" ");
             for (let i = 0; i < wordLetters.length; i++) {
                 word.push("_");
             }
@@ -127,7 +127,7 @@ var init = function () {
             // adds letter to masked word if it matches
             else if (wordLetters.includes(letter)) {
                 for (var j = 0; j < wordLetters.length; j++) {
-                    if (letter === wordLetters[j]) {
+                    if (letter === wordLetters[j] && guessed.includes(letter)=== false)  {
                         word[j] = letter;
                         changeSound("assets/sounds/itemget.mp3");
                         sound.volume = 1.0;
@@ -141,7 +141,7 @@ var init = function () {
                         resetVariables()
                     }
 
-                    document.getElementById("word").innerHTML = word;
+                    document.getElementById("word").innerHTML = word.join(" ");
                 }
             }
             // adds key to tried list and deducts a guess if wrong
