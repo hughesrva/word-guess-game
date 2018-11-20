@@ -66,6 +66,7 @@ var init = function () {
             selection = words[Math.floor(Math.random() * words.length)];
             wordLetters = selection.split("");
             word = [];
+            document.getElementById("lettersGuessed").innerHTML = guessed;
             document.getElementById("guessesLeft").innerHTML = guessesLeft;
             document.getElementById("word").innerHTML = word.join(" ");
             for (let i = 0; i < wordLetters.length; i++) {
