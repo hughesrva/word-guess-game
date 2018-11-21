@@ -68,7 +68,6 @@ var init = function () {
             word = [];
             document.getElementById("lettersGuessed").innerHTML = guessed;
             document.getElementById("guessesLeft").innerHTML = guessesLeft;
-            document.getElementById("word").innerHTML = word.join(" ");
             for (let i = 0; i < wordLetters.length; i++) {
                 word.push("_");
             }
@@ -141,9 +140,9 @@ var init = function () {
                         sound.play();
                         resetVariables()
                     }
-
-                    document.getElementById("word").innerHTML = word.join(" ");
                 }
+                document.getElementById("word").innerHTML = word.join(" ");
+
             }
             // adds key to tried list and deducts a guess if wrong
             else if (guessesLeft > 1) {
@@ -166,7 +165,6 @@ var init = function () {
     document.onclick = startGame;
 
 }
-
 
 
 
